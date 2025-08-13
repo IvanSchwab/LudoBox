@@ -1,4 +1,4 @@
-package com.ludoproject.LudoBox.entities;
+package com.ludoproject.LudoBox.Entities;
 
 import com.ludoproject.LudoBox.enums.Genre;
 import lombok.Getter;
@@ -10,7 +10,14 @@ public class Game {
 
     //------------- Constructor -------------
 
-    public Game(int id, String name, LocalDate release, double averagePlayTime, String description, Genre genre) {
+    public Game(
+            int id,
+            String name,
+            LocalDate release,
+            double averagePlayTime,
+            String description,
+            Genre genre
+    ) {
         this.id = id;
         this.name = name;
         this.release = release;

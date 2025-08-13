@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/LudoBox.iml" filepath="$PROJECT_DIR$/.idea/LudoBox.iml" />
+      <module fileurl="file://$PROJECT_DIR$/LudoBox/LudoBox.iml" filepath="$PROJECT_DIR$/LudoBox/LudoBox.iml" />
     </modules>
   </component>
 </project>
