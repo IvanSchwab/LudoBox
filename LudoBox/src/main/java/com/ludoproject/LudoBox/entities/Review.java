@@ -1,10 +1,12 @@
 package com.ludoproject.LudoBox.Entities;
 
+import com.ludoproject.LudoBox.Interfaces.Ratable;
 import lombok.Getter;
+
 import java.util.List;
 import java.util.ArrayList;
 
-public class Review {
+public class Review implements Ratable {
     public Review(int reviewID, int userID, String reviewText, int gameID) {
         this.reviewID = reviewID;
         this.userID = userID;
@@ -33,4 +35,8 @@ public class Review {
         this.reviewText = newReviewText;
     }
 
+    @Override
+    public void Rate(Rating rating) {
+
+    }
 }

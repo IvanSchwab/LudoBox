@@ -7,22 +7,24 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-public class GameList {
+public abstract class GameList {
 
     public GameList(
             String gameListName,
             String description,
-            Date creationDate,
             Boolean isPublic,
-            Double score
     ) {
+        // TODO: implementar peticion de ID valido.
+        //this.gameListID =  ;
         this.gameListName = gameListName;
         this.description = description;
-        this.creationDate = creationDate;
+        // TODO: implementar asignar fecha actual.
+        //this.creationDate = ;
         this.isPublic = isPublic;
-        this.score = score;
         this.gamesID = new ArrayList<Integer>();
     }
+    @Getter
+    private final int gameListID;
 
     @Getter
     private final String gameListName;
@@ -40,9 +42,6 @@ public class GameList {
 
     @Getter
     private Boolean isPublic;
-
-    @Getter
-    private Double score;
 
     public void addGame(int gameID){
         this.gamesID.add(gameID);
