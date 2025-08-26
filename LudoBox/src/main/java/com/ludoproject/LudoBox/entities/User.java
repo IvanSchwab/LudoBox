@@ -1,13 +1,14 @@
 package com.ludoproject.LudoBox.Entities;
 
 import com.ludoproject.LudoBox.Entities.GameList;
+import com.ludoproject.LudoBox.Interfaces.Hiddable;
 import lombok.Getter;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.awt.*;
 
-public class User {
+public class User implements Hiddable{
 
     public User(int id, GameList toPlayList, GameList playedGamesList, List<Review> reviews, Image profileImage) {
         this.id              = id;
@@ -36,5 +37,9 @@ public class User {
     public void RemoveList(int listID){}
     public void RateGame(int gameID){}
 
+    @Override
+    public void hide() {
+
+    }
 }
 

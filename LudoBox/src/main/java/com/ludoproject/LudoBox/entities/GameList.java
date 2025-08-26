@@ -1,25 +1,27 @@
 package com.ludoproject.LudoBox.Entities;
 
+import com.ludoproject.LudoBox.Interfaces.Hiddable;
 import lombok.Getter;
 
 import java.awt.*;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-public abstract class GameList {
+public abstract class GameList implements Hiddable{
 
     public GameList(
             String gameListName,
             String description,
-            Boolean isPublic,
+            Boolean isPublic
     ) {
         // TODO: implementar peticion de ID valido.
-        //this.gameListID =  ;
+        this.gameListID =  0;
         this.gameListName = gameListName;
         this.description = description;
         // TODO: implementar asignar fecha actual.
-        //this.creationDate = ;
+        this.creationDate = java.sql.Date.valueOf(LocalDate.now());
         this.isPublic = isPublic;
         this.gamesID = new ArrayList<Integer>();
     }
@@ -51,7 +53,5 @@ public abstract class GameList {
     }
     public void editList(){
     }
-    public void ChangeVisibility(){
-        this.isPublic = !this.isPublic;
-    }
+
 }

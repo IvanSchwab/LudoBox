@@ -9,4 +9,8 @@ public class PlayedGameList extends GameList {
 
     private List<Review> playedGames;
 
+    @Override
+    public void hide() {
+
+    }
 }

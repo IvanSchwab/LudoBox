@@ -1,12 +1,13 @@
 package com.ludoproject.LudoBox.Entities;
 
+import com.ludoproject.LudoBox.Interfaces.Hiddable;
 import com.ludoproject.LudoBox.enums.Genre;
 import lombok.Getter;
 import lombok.Setter;
 
 import java.time.LocalDate;
 
-public class Game {
+public class Game implements Hiddable {
 
     //------------- Constructor -------------
 
@@ -67,4 +68,8 @@ public class Game {
                 '}';
     }
 
+    @Override
+    public void hide() {
+
+    }
 }

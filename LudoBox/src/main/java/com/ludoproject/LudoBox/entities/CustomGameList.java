@@ -33,4 +33,9 @@ public class CustomGameList extends GameList implements Collaborative{
     public void RemoveCollaborator(int userID) {
 
     }
+
+    @Override
+    public void hide() {
+
+    }
 }

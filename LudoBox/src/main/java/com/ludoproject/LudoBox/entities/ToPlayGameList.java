@@ -8,4 +8,8 @@ public class ToPlayGameList extends GameList{
     }
 
 
+    @Override
+    public void hide() {
+
+    }
 }
