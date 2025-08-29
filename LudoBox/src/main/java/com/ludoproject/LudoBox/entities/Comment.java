@@ -1,6 +1,6 @@
-package com.ludoproject.LudoBox.Entities;
+package com.ludoproject.LudoBox.entities;
 
-import com.ludoproject.LudoBox.Interfaces.Hiddable;
+import com.ludoproject.LudoBox.interfaces.Hiddable;
 import lombok.Getter;
 
 public class Comment implements Hiddable {

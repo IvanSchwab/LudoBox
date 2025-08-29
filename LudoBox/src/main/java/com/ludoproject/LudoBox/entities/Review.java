@@ -1,31 +1,36 @@
-package com.ludoproject.LudoBox.Entities;
+package com.ludoproject.LudoBox.entities;
 
-import com.ludoproject.LudoBox.Interfaces.Ratable;
+import com.ludoproject.LudoBox.interfaces.Ratable;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 import lombok.Getter;
 
 import java.util.List;
 import java.util.ArrayList;
 
 public class Review implements Ratable {
-    public Review(int reviewID, int userID, String reviewText, int gameID) {
-        this.reviewID = reviewID;
+    public Review(Long reviewID, Long userID, String reviewText, Long gameID) {
+        this.reviewId = reviewID;
         this.userID = userID;
         this.reviewText = reviewText;
         this.gameID = gameID;
         this.commentsList = new ArrayList<ParentComment>();
     }
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Getter
-    private final int reviewID;
+    private Long reviewId;
 
     @Getter
-    private final int userID;
+    private final Long userID;
 
     @Getter
     private String reviewText;
 
     @Getter
-    private final int gameID;
+    private final Long gameID;
 
     private List<ParentComment> commentsList;
 
@@ -39,4 +44,15 @@ public class Review implements Ratable {
     public void Rate(Rating rating) {
 
     }
+
+    public void setUser(User user) {
+    }
+
+    public Review(Long reviewID, Long userID, Long gameID) {
+        this.reviewId = reviewID;
+        this.userID = userID;
+        this.gameID = gameID;
+    }
+
+
 }

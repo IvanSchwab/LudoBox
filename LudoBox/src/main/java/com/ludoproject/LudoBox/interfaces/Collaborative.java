@@ -1,4 +1,4 @@
-package com.ludoproject.LudoBox.Interfaces;
+package com.ludoproject.LudoBox.interfaces;
 
 public interface Collaborative {
     public abstract void AddCollaborator(int collaboratorID);

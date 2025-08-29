@@ -1,45 +1,32 @@
-package com.ludoproject.LudoBox.Entities;
+package com.ludoproject.LudoBox.entities;
 
-import com.ludoproject.LudoBox.Entities.GameList;
-import com.ludoproject.LudoBox.Interfaces.Hiddable;
+import com.ludoproject.LudoBox.enums.Role;
+import jakarta.persistence.*;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.awt.*;
+@Entity
+@Table(name = "users")
+@Getter
+@Setter
+@NoArgsConstructor
+public class User {
 
-public class User implements Hiddable{
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
-    public User(int id, GameList toPlayList, GameList playedGamesList, List<Review> reviews, Image profileImage) {
-        this.id              = id;
-        this.toPlayList      = toPlayList;
-        this.playedGamesList = playedGamesList;
-        this.reviews         = new ArrayList<Review>();
-        this.profileImage    = profileImage;
-    }
+    @Column(nullable = false, unique = true)
+    private String username;
 
-    @Getter
-    private int id;
+    @Column(nullable = false)
+    private String password;
 
-    private GameList toPlayList;
-    private GameList playedGamesList;
-    private List<Review> reviews;
+    @Enumerated(EnumType.STRING)
+    @Column(nullable = false)
+    private Role role;  // REGULAR, MODERATOR, ADMIN
 
-    @Getter
-    private Image profileImage;
-
-    public void LogIn(){}
-    public void LogOut(){}
-    public void CreateReview(){}
-    public void EditReview(int reviewID){}
-    public void RemoveReview(int reviewID){}
-    public void CreateList(){}
-    public void RemoveList(int listID){}
-    public void RateGame(int gameID){}
-
-    @Override
-    public void hide() {
-
-    }
+    // campos opcionales
+    private String profileImageUrl;
 }
-

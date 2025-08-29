@@ -1,4 +1,4 @@
-package com.ludoproject.LudoBox.Entities;
+package com.ludoproject.LudoBox.entities;
 
 public class Rating {
     public Rating(

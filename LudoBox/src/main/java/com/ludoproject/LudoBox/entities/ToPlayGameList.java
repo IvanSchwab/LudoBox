@@ -1,6 +1,4 @@
-package com.ludoproject.LudoBox.Entities;
-
-import java.util.Date;
+package com.ludoproject.LudoBox.entities;
 
 public class ToPlayGameList extends GameList{
     public ToPlayGameList(String gameListName, String description, Boolean isPublic) {

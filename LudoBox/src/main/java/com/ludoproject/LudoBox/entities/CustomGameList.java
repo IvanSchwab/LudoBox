@@ -1,6 +1,6 @@
-package com.ludoproject.LudoBox.Entities;
+package com.ludoproject.LudoBox.entities;
 
-import com.ludoproject.LudoBox.Interfaces.Collaborative;
+import com.ludoproject.LudoBox.interfaces.Collaborative;
 
 import java.util.List;
 

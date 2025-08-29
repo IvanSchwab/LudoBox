@@ -1,5 +1,4 @@
-package com.ludoproject.LudoBox.Entities;
-import com.ludoproject.LudoBox.Interfaces.Hiddable;
+package com.ludoproject.LudoBox.entities;
 import lombok.Getter;
 
 import java.util.List;
